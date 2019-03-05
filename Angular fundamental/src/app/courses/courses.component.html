@@ -1,0 +1,18 @@
+<p>
+  {{ Title() }}
+</p>
+<table>
+  <thead>
+    <th>
+      #ID
+    </th>
+    <th>Course Name</th>
+  </thead>
+  <body>
+    <tr *ngFor="let Course of Courses">
+      <td>{{ Course.id}}</td>
+      <td>{{ Course.name}}</td>
+    </tr>
+  </body>
+</table>
+
