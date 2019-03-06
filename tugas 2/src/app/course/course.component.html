@@ -1,0 +1,35 @@
+<div style = "text-align: center">
+  <h1>{{IniTugas}}</h1>
+  <h1>{{currentDate|date:"fullDate"}}</h1>
+</div>
+
+
+<div style="text-align: left">
+<h1>{{nama}}</h1>
+<h1>{{alamat}}</h1>
+</div>
+
+<div align ="left">
+  <h1>
+    <div style="text-align: left" *ngFor="let b of hobi ">
+      {{b.Hobby}}
+      {{b.Saya}}
+    </div>
+
+    <table border=1>
+      <thead>
+        <td>No</td>
+        <td>Hobby</td>
+        <td>Keterangan</td>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let table of Course">
+          <td>{{table.No}}</td>
+          <td>{{table.hobby}}</td>
+          <td>{{table.Keterangan}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </h1>
+</div>
