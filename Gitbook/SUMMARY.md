@@ -6,3 +6,4 @@
 * [4. DisplayBinding](4.DisplayBinding.md)
 * [6. Directive](6.Directive.md)
 * [7. TemplateDriven](7.TemplateDriven.md)
+* [8. ReactiveForm](8.ReactiveForm.md)
