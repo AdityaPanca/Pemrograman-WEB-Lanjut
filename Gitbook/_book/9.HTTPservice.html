@@ -236,7 +236,112 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <h1 id="9-httpservice">9. HTTPservice</h1>
+<h2 id="praktikum-&#x2013;-bagian-1-jsonplaceholder">Praktikum &#x2013; Bagian 1: JSONPlaceHolder</h2>
+<ul>
+<li>Pada bagian ini kita akan menggunakan fake HTTP Service yang akan kita gunakan sebagai back end aplikasi kita. Kunjungi alamat berikut : <a href="http://jsonplaceholder.typicode.com/" target="_blank">http://jsonplaceholder.typicode.com/</a>
+Jika Anda scroll down maka Anda akan menemukan bagian Resources seperti pada gambar 2 berikut :</li>
+</ul>
+<p><img src="img/js9/1.png" alt=""></p>
+<h2 id="praktikum---bagian-2--getting-data">Praktikum - Bagian 2 : Getting Data</h2>
+<ul>
+<li>Buat component baru dengan nama posts dengan perintah ng g c posts</li>
+</ul>
+<p><img src="img/js9/2.png" alt=""></p>
+<ul>
+<li><p>Untuk menggunakan HTTPService, kita perlu melakukan import HttpModule pada app.module.ts.</p>
+</li>
+<li><p>Setelah kita menambahkan HttpModule pada bagian imports, maka secara otomatis akan menambah imports pada bagian paling atas </p>
+</li>
+</ul>
+<p><img src="img/js9/4.png" alt=""></p>
+<ul>
+<li>Jika HttpModule tidak muncul secara otomatis maka anda harus menginstal terlebih dahulu dengan perintah npm i @angular/http </li>
+</ul>
+<p><img src="img/js9/3.png" alt=""></p>
+<ul>
+<li>Modifikasi file posts.component.ts menjadi seperti berikut:</li>
+</ul>
+<p><img src="img/js9/6.png" alt=""></p>
+<ul>
+<li>Jalankan dan Catat hasilnya (soal 1)</li>
+</ul>
+<p><img src="img/js9/8.png" alt=""></p>
+<ul>
+<li>Bagaimana jika anda lupa melakukan import HttpModule pada langkah ke-2 ? Lakukan commenting pada HttpModule seperti pada kode berikut :</li>
+</ul>
+<p><img src="img/js9/9.png" alt=""></p>
+<ul>
+<li>Apa yang terjadi pada console? Berikan penjelasan atas error yang terjadi. (soal 2)</li>
+</ul>
+<p><img src="img/js9/10.png" alt=""></p>
+<ul>
+<li>Lengkapi kode program pada posts.component.ts menjadi :</li>
+</ul>
+<p><img src="img/js9/7.png" alt=""></p>
+<ul>
+<li>Jalankan pada browser dan jelaskan yang muncul pada console. (soal 3)</li>
+</ul>
+<p><img src="img/js9/11.png" alt=""></p>
+<ul>
+<li>Jelaskan perbedaan yang terjadi pada console jika kode pada posts.component.ts diubah menjadi : (soal 4)</li>
+</ul>
+<p><img src="img/js9/12.png" alt=""></p>
+<ul>
+<li>Untuk menampilkan data pada halaman browser, ubah kode program pada posts.component.html seperti berikut :</li>
+</ul>
+<p><img src="img/js9/15.png" alt=""></p>
+<ul>
+<li>Ubah kode program pada posts.component.ts :</li>
+</ul>
+<p><img src="img/js9/14.png" alt=""></p>
+<ul>
+<li>Jalankan dan jelaskan apa yang muncul pada browser. (soal 5)</li>
+</ul>
+<p><img src="img/js9/16.png" alt=""></p>
+<h2 id="praktikum---bagian-3--creating-data">Praktikum - Bagian 3 : Creating Data</h2>
+<ul>
+<li>Kita akan menambahkan sebuah text area untuk memasukkan data melalui browser, seperti gambar berikut :</li>
+</ul>
+<p><img src="img/js9/19.png" alt=""></p>
+<ul>
+<li>Pertama, tambahkan input elemen pada posts.component.html :</li>
+</ul>
+<p><img src="img/js9/17.png" alt=""></p>
+<ul>
+<li>Modifikasi kode program pada posts.component.ts </li>
+</ul>
+<p><img src="img/js9/18.png" alt=""></p>
+<ul>
+<li>jalankan browsernya </li>
+</ul>
+<p><img src="img/js9/19.png" alt=""></p>
+<h2 id="praktikum---bagian-4--updating-data">Praktikum - Bagian 4 : Updating Data</h2>
+<ul>
+<li>Tambahkan button Update dengan modifikasi kode program seperti di bawah ini :</li>
+</ul>
+<p><img src="img/js9/20.png" alt=""></p>
+<ul>
+<li>Tambahkan fungsi updatePost pada posts.ts seperti di bawah :</li>
+</ul>
+<p><img src="img/js9/21.png" alt=""></p>
+<ul>
+<li>hasilnya</li>
+</ul>
+<p><img src="img/js9/22.png" alt=""> </p>
+<ul>
+<li>Tambahkan button Delete dengan modifikasi kode program seperti di bawah ini :</li>
+</ul>
+<p><img src="img/js9/23.png" alt=""></p>
+<ul>
+<li>Tambahkan fungsi deletePost pada posts.ts seperti di bawah :</li>
+</ul>
+<p><img src="img/js9/24.png" alt=""></p>
+<ul>
+<li>hasilnya</li>
+</ul>
+<p><img src="img/js9/25.png" alt=""></p>
+
                                 
                                 </section>
                             
@@ -275,7 +380,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"9. HTTPservice","level":"1.8","depth":1,"previous":{"title":"8. ReactiveForm","level":"1.7","depth":1,"path":"8.ReactiveForm.md","ref":"8.ReactiveForm.md","articles":[]},"dir":"neutral"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"9.HTTPservice.md","mtime":"2019-04-24T08:23:18.792Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T08:34:13.986Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9. HTTPservice","level":"1.8","depth":1,"previous":{"title":"8. ReactiveForm","level":"1.7","depth":1,"path":"8.ReactiveForm.md","ref":"8.ReactiveForm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"9.HTTPservice.md","mtime":"2019-04-30T15:55:32.930Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-30T15:57:11.981Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
