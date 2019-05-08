@@ -8,3 +8,4 @@
 * [6. TemplateDriven](6.TemplateDriven.md)
 * [8. ReactiveForm](8.ReactiveForm.md)
 * [9. HTTPservice](9.HTTPservice.md)
+* [10. Routes](10.Routes.md)
