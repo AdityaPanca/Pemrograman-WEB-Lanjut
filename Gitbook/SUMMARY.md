@@ -9,3 +9,4 @@
 * [8. ReactiveForm](8.ReactiveForm.md)
 * [9. HTTPservice](9.HTTPservice.md)
 * [10. Routes](10.Routes.md)
+* [11. Authentication](11.Authentication.md)
