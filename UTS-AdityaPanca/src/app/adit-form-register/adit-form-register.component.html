@@ -1,0 +1,82 @@
+<div style="text-align :center">
+<h1>
+  Ujian Tengah Semester
+</h1>
+</div>
+
+<form [formGroup]="form">
+  <div class="form-group">
+    <label for="nama">nama</label>
+    <input
+    formControlName="nama"
+    id="nama"
+    type="text"
+    class="form-control">
+    <div *ngIf="nama.touched && nama.invalid" class="alert alert-danger ">
+      <div *ngIf="nama.errors.required"> Nama harus diisi</div>
+      <div *ngIf="nama.errors.minlenght"> Nama minimal 3</div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="alamat">alamat</label>
+    <input
+    formControlName="alamat"
+    id="alamat"
+    type="text"
+    class="form-control">
+    <div *ngIf="alamat.touched && alamat.invalid" class="alert alert-danger ">
+        <div *ngIf="alamat.errors.required"> Alamat harus diisi</div>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <label for="tanggal">tanggal</label>
+      <input
+      formControlName="tanggal"
+      id="tanggal"
+      type="date"
+      class="form-control">
+      <div *ngIf="tanggal.touched && tanggal.invalid" class="alert alert-danger ">
+          <div *ngIf="tanggal.errors.required"> tanggal harus diisi</div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="jenisKelamin">Jenis Kelamin</label>
+        <input
+        id="jenisKelamin"
+        class="form-control">
+        <select name="jenisKelamin" id="jenisKelamin" class="form-control">
+          <option *ngFor="let method of jenisKelamin" [value]="method.id">{{method.name}}</option>
+        </select>
+        <!-- <div *ngIf="tanggal.touched && tanggal.invalid" class="alert alert-danger ">
+            <div *ngIf="tanggal.errors.required"> tanggal harus diisi</div>
+          </div> -->
+      </div>
+  
+    <div class="form-group">
+        <label for="noTelp">noTelp</label>
+        <input
+        formControlName="noTelp"
+        id="noTelp"
+        type="number"
+        class="form-control">
+        <div *ngIf="noTelp.touched && noTelp.invalid" class="alert alert-danger ">
+            <div *ngIf="noTelp.errors.required"> no Telp harus diisi angka dan tidak boleh kosong</div>
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label for="username">username</label>
+          <input
+          formControlName="username"
+          id="username"
+          type="text"
+          class="form-control">
+          <div *ngIf="username.touched && username.invalid" class="alert alert-danger ">
+              <div *ngIf="username.errors.required"> username harus diisi</div>
+            </div>
+        </div>
+  <button class="btn btn-primary" type="submit" >Sign Up</button>
+</form>
